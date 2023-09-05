@@ -9,14 +9,15 @@ class ImageInline(SortableStackedInline):
     model = Image
     readonly_fields = ('image_preview',)
     extra = 3
-    def image_preview(self, obj):
-        return format_html('<img src="{}" style="max-height: 200px; max-width: auto;" />', obj.image.url)
 
+    def image_preview(self, obj):
+        return format_html('<img src="{}" style="max-height: 200px; max-width: auto;" />',
+                           obj.image.url
+                           )
 
 
 @admin.register(Place)
 class PlaceAdmin(SortableAdminBase, admin.ModelAdmin):
     list_display = ('title',)
     inlines = [
-        ImageInline,   ]
-
+        ImageInline, ]

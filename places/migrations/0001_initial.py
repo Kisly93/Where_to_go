@@ -14,7 +14,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Place',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True, primary_key=True,
+                                           serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=200, verbose_name='Заголовок')),
                 ('short_description', models.TextField(blank=True, verbose_name='Короткое описание')),
                 ('long_description', models.TextField(blank=True, verbose_name='Длинное описание')),

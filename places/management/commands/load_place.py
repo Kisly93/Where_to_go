@@ -11,9 +11,10 @@ from places.models import Image, Place
 class Command(BaseCommand):
     help = 'Добавить место на карту'
 
-
     def add_arguments(self, parser):
-        parser.add_argument('place', type=str, help='Введите путь к файлу с данными')
+        parser.add_argument('place', type=str,
+                            help='Введите путь к файлу с данными'
+                            )
 
     def handle(self, *args, **kwargs):
         place_url = kwargs['place']
@@ -24,8 +25,10 @@ class Command(BaseCommand):
 
         place_obj, created = Place.objects.get_or_create(
             title=place_payload['title'],
-            coordinate_lng=float(place_payload['coordinates']['lng'].replace(',', '.')),
-            coordinate_lat=float(place_payload['coordinates']['lat'].replace(',', '.')),
+            coordinate_lng=float(place_payload['coordinates']['lng'].
+                                 replace(',', '.')),
+            coordinate_lat=float(place_payload['coordinates']['lat'].
+                                 replace(',', '.')),
             defaults={
                 'short_description': place_payload.get('short_description', ''),
                 'long_description': place_payload.get('long_description', ''),
@@ -45,7 +48,3 @@ class Command(BaseCommand):
             location=place_obj,
             image=ContentFile(response.content, name=filename)
         )
-
-
-
-
