@@ -33,13 +33,13 @@ def get_geojson(request):
 
 
 def get_place(request, place_id):
-    imges = []
+    images = []
     place = get_object_or_404(Place, pk=place_id)
     for image in place.images.all():
-        imges.append(image.image.url)
+        images.append(image.image.url)
     place_context = {
         "title": place.title,
-        "imgs": imges,
+        "imgs": images,
         "short_description": place.short_description,
         "long_description": place.long_description,
         "coordinates": {
@@ -52,4 +52,3 @@ def get_place(request, place_id):
         place_context,
         json_dumps_params={'ensure_ascii': False, 'indent': 2}
     )
-# Create your views here.
