@@ -13,7 +13,7 @@ class Place(models.Model):
         return self.title
 
 class Image(models.Model):
-    location = models.ForeignKey(Place, on_delete=models.CASCADE, related_name='images')
+    location = models.ForeignKey(Place, on_delete=models.CASCADE, verbose_name='Локация', related_name='images')
     image = models.ImageField(verbose_name='Картинка', upload_to='media/')
     order = models.PositiveIntegerField(verbose_name='Порядок', default=0)
 
