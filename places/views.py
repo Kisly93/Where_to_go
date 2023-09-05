@@ -33,10 +33,8 @@ def get_geojson(request):
 
 
 def get_place(request, place_id):
-    images = []
     place = get_object_or_404(Place, pk=place_id)
-    for image in place.images.all():
-        images.append(image.image.url)
+    images = [image.image.url for image in place.images.all()]
     place_context = {
         "title": place.title,
         "imgs": images,
