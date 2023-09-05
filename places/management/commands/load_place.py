@@ -1,9 +1,11 @@
-import requests
-from urllib.parse import urlparse
 from pathlib import Path
-from django.core.management.base import BaseCommand
-from places.models import Place, Image
+from urllib.parse import urlparse
+
+import requests
 from django.core.files.base import ContentFile
+from django.core.management.base import BaseCommand
+
+from places.models import Image, Place
 
 
 class Command(BaseCommand):
