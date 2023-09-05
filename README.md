@@ -3,7 +3,8 @@
 
 Внешний вид сайта
 
-![index](https://github.com/Kisly93/where_to-go/assets/123402270/2c635baa-6b23-4c37-b6cf-a445f613cbb2)
+![index](https://github.com/Kisly93/where_to_go/assets/123402270/1d72f9af-61c5-4efe-85fb-c65dc98a5c3a)
+
 
 Сайт также можно увидеть [здесь](http://testemail1.pythonanywhere.com/)
 
@@ -61,9 +62,9 @@ python -m venv venv
 
 
 Основной вид административной панели в разделе "Place":
-![adminka_place](https://github.com/Kisly93/where_to-go/assets/123402270/6cdc3389-c664-45c4-8282-ad9b95ed5eaa)
+![adminkaplace1](https://github.com/Kisly93/where_to_go/assets/123402270/86aa71b8-b823-4388-8f9a-aa5aef0749ce)
 
-![adminka_place](https://github.com/Kisly93/where_to-go/assets/123402270/782bc5c5-3102-4f58-8f32-f86d01400dc5)
+![adminkaplace2](https://github.com/Kisly93/where_to_go/assets/123402270/26cdb096-780c-4348-bde0-45e709d8e402)
 
 
 ## Автоматическое заполнение сайта
@@ -73,7 +74,8 @@ python -m venv venv
 python manage.py load_place https://raw.githubusercontent.com/devmanorg/where-to-go-places/master/places/название_места.json
 ```
 ### Структура json файла:
-![json_file](https://github.com/Kisly93/where_to-go/assets/123402270/600c90fa-f47c-42e9-bbdb-15d356559881)
+![json_file](https://github.com/Kisly93/where_to_go/assets/123402270/a7b4be95-40af-4d54-9c5b-266da87a897b)
+
 
 ## Цели проекта
 
