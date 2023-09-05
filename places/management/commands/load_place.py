@@ -25,8 +25,8 @@ class Command(BaseCommand):
             coordinate_lng=float(place_payload['coordinates']['lng'].replace(',', '.')),
             coordinate_lat=float(place_payload['coordinates']['lat'].replace(',', '.')),
             defaults={
-                'description_short': place_payload.get('description_short', ''),
-                'description_long': place_payload.get('description_long', ''),
+                'short_description': place_payload.get('short_description', ''),
+                'long_description': place_payload.get('long_description', ''),
             }
         )
         if not created:
