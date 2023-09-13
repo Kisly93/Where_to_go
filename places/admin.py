@@ -26,3 +26,4 @@ class PlaceAdmin(SortableAdminBase, admin.ModelAdmin):
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('location', 'image')
     list_filter = ('location',)
+    raw_id_fields = ('location',)
